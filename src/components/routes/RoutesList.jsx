@@ -1,24 +1,14 @@
-import { Routes, Route, Navigate } from "react-router-dom";
-import { useUserAuthenticateState } from "../../hooks/useUserAuthenticate";
+import { Routes, Route } from "react-router-dom";
 import Home from "../pages/Home";
-import SignIn from "../pages/SignIn";
-import PrivateRoute from "./PrivateRoute";
+import Chats from "../pages/Chats";
+import Profile from "../pages/Profile";
 const RoutesList = () => {
-  const isUserAuthenticated = useUserAuthenticateState();
   return (
     <Routes>
-      <Route
-        path="/sign-in"
-        element={isUserAuthenticated ? <Navigate to="/" /> : <SignIn />}
-      />
-      <Route
-        path="/"
-        element={
-          <PrivateRoute>
-            <Home />
-          </PrivateRoute>
-        }
-      />
+      <Route path="/" element={<Home />}>
+        <Route path="/chats/:userId" element={<Chats />} />
+        <Route path="/profile" element={<Profile />} />
+      </Route>
     </Routes>
   );
 };

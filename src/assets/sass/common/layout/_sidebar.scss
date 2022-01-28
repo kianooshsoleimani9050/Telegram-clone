@@ -1,0 +1,35 @@
+.sidebar_div__container {
+  position: relative;
+  background-color: $dark-blue-color;
+  overflow-y: scroll;
+}
+.sidebar_h3__container {
+  @include all_fonts_styles($fs-xx-larg, 600, inherit, $white-color);
+  & > h3 {
+    background: linear-gradient(
+      to right,
+      $light-blue-color 30%,
+      $white-color 60%,
+      $blue-color 90%
+    );
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: text-moving-background 5s linear infinite;
+  }
+}
+.sidebar_small__container {
+  @include all_fonts_styles($fs-normal, 400, inherit, $white-color);
+  cursor: pointer;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+.sidebar_profile_img__container {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+}

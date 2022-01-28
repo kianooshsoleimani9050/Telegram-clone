@@ -1,0 +1,14 @@
+.profile_content_div__container {
+  overflow: hidden;
+  overflow-y: scroll;
+}
+.profile_form_div__container {
+  border: 1px solid rgba($color: $white-color, $alpha: 0.3);
+  border-radius: 5px;
+}
+.profile_form_submit_button__container {
+  border-radius: 5px;
+  background-color: $red-color;
+  color: $white-color;
+  border: none;
+}

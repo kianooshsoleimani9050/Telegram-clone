@@ -1,0 +1,44 @@
+.home_div__container {
+  background-color: $blue-color;
+  margin: 0 auto;
+  max-width: 90rem;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+.home_navbar_div__container {
+  width: 500px;
+  height: 100vh;
+  z-index: 0;
+  @include tablet {
+    & {
+      width: 100%;
+    }
+  }
+  @include mobile {
+    & {
+      width: 100vw;
+    }
+  }
+}
+.home_outlet_div__conatiner {
+  background-color: $blue-color;
+  width: 100%;
+  height: 100vh;
+  transition: all ease-in-out 0.5s;
+  @include mobile {
+    & {
+      width: 100vw;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    &.close {
+      transform: translateX(100%);
+    }
+    &.open {
+      transform: translateX(0);
+      z-index: 10;
+    }
+  }
+}

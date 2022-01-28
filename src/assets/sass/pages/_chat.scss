@@ -1,0 +1,26 @@
+.chats_content_div__container {
+  overflow: hidden;
+  overflow-y: scroll;
+}
+.chats_input_div__container {
+  height: 70px;
+  border-top: 1px solid rgba($color: $white-color, $alpha: 0.3);
+  & > input {
+    background-color: transparent;
+    @include all_fonts_styles($fs-larg, 400, inherit, $white-color);
+    border: none;
+    &::placeholder {
+      @include all_fonts_styles($fs-normal, 400, inherit, $white-color);
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+  & > svg {
+    color: $white-color;
+    cursor: pointer;
+    &:hover {
+      color: $light-blue-color;
+    }
+  }
+}

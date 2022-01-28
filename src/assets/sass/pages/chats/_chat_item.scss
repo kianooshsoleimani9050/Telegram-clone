@@ -1,0 +1,35 @@
+.chatitem_a__container {
+  display: block;
+  text-decoration: none;
+  min-height: 70px;
+}
+.chatitem_a_active__container {
+  background-color: rgba($color: $white-color, $alpha: 0.3);
+}
+.chatitem_img__container {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  background-color: $blue-color;
+}
+.chatitem_content_div__container {
+  width: calc(100% - 60px);
+  border-bottom: 1px solid rgba($color: $white-color, $alpha: 0.1);
+  @include all_fonts_styles($fs-x-small, 500, inherit, $white-color);
+}
+.chatitem_content_lastchat_div__container {
+  @include all_fonts_styles(
+    $fs-x-small,
+    400,
+    inherit,
+    rgba($color: $white-color, $alpha: 0.8)
+  );
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  line-height: 16px; /* fallback */
+  max-height: 32px; /* fallback */
+  -webkit-line-clamp: 2; /* number of lines to show */
+  -webkit-box-orient: vertical;
+}
